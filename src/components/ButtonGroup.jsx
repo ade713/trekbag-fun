@@ -1,4 +1,5 @@
 import { Button } from '../Button';
+import { MARK_ALL_AS_COMPLETE, MARK_ALL_AS_INCOMPLETE, REMOVE_ALL_ITEMS, RESET_TO_INITIAL } from '../lib/constants';
 import { useItemStore } from '../stores/itemStore';
 
 export function ButtonGroup() {  
@@ -9,19 +10,19 @@ export function ButtonGroup() {
 
   const secondaryButtons = [
     {
-      text: "Mark all as complete",
+      text: MARK_ALL_AS_COMPLETE,
       onClickButton: markAllAsComplete,
     },
     {
-      text: "Mark all as incomplete",
+      text: MARK_ALL_AS_INCOMPLETE,
       onClickButton: markAllAsIncomplete,
     },
     {
-      text: "Reset to initial",
+      text: RESET_TO_INITIAL,
       onClickButton: resetToInitial,
     },
     {
-      text: "Remove all items",
+      text: REMOVE_ALL_ITEMS,
       onClickButton: removeAllItems,
     },
   ];
